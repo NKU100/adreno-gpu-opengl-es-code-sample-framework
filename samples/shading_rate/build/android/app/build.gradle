@@ -10,11 +10,12 @@ project.afterEvaluate {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.quic.shading_rate"
         minSdkVersion 26
+        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -31,8 +32,9 @@ android {
     externalNativeBuild {
         cmake {
             path file('CMakeLists.txt')
-            version "3.28.0"
+//            version "3.28.0"
         }
     }
+    namespace 'com.quic.shadingrate'
 }
 
