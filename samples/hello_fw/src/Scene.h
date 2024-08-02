@@ -18,12 +18,10 @@ public:
     virtual VOID Update();
     virtual VOID Render();
 
-    CSample( const CHAR* strName );
+    explicit CSample( const CHAR* strName );
 
 private:
-
-    BOOL InitShaders();
-
+    int time = 0;
     const CHAR*  g_strWindowTitle;
     UINT32 g_nWindowWidth;
     UINT32 g_nWindowHeight;
@@ -31,8 +29,8 @@ private:
     GLuint       g_hShaderProgram;
     GLuint       g_VertexLoc;
     GLuint       g_ColorLoc;
-    const CHAR* g_strFSProgram;
-    const CHAR* g_strVSProgram;
+    const CHAR* g_strFSProgram{};
+    const CHAR* g_strVSProgram{};
     FRMMATRIX4X4       m_matProj;
 };
 
