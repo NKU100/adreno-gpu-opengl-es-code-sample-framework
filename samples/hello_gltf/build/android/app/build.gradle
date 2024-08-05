@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.quic.hello_gltf"
         minSdkVersion 26
+        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -26,5 +27,6 @@ android {
             version "3.30.1"
         }
     }
+    namespace 'com.quic.hello_gltf'
 }
 
