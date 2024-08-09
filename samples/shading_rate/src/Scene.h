@@ -25,7 +25,7 @@ public:
     virtual VOID Update();
     virtual VOID Render();
 
-    CSample( const CHAR* strName );
+    explicit CSample( const CHAR* strName );
 
 private:    
 
@@ -34,13 +34,13 @@ private:
     VOID DrawUI();
     
     GLuint m_shaderProgram;
-    GLuint m_modelViewMatrixLoc;
-    GLuint m_projMatrixLoc;
+    GLuint m_modelViewMatrixLoc{};
+    GLuint m_projMatrixLoc{};
     GLuint m_vertexLoc;
     GLuint m_uvLoc;
-    const CHAR* m_pFragmentShader;
-    const CHAR* m_pVertexShader;
-    GLuint m_textureHandle;
+    const CHAR* m_pFragmentShader{};
+    const CHAR* m_pVertexShader{};
+    GLuint m_textureHandle{};
 
     CFrmFontGLES m_font;
 
